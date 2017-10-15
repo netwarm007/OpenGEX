@@ -106,7 +106,7 @@ namespace ODDL
         }
     }
 
-    constexpr int32 operator "" _i32(const char* s, unsigned long) {
+    constexpr int32 operator "" _i32(const char* s, size_t) {
         return details::i32(s, 0);
     }
 
