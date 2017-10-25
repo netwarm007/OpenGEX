@@ -63,6 +63,7 @@
 #include <math.h>
 #include <new>
 #include <cstdint>
+#include <cstdlib>
 
 
 namespace ODDL
