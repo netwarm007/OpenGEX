@@ -998,6 +998,35 @@ const ObjectStructure *GeometryNodeStructure::GetObjectStructure(void) const
 	return (geometryObjectStructure);
 }
 
+bool GeometryNodeStructure::GetVisibleFlag(void) const
+{
+	if (visibleFlag[0]) {
+		return visibleFlag[1];
+	}
+	else {
+		return geometryObjectStructure->GetVisibleFlag();
+	}
+}
+
+bool GeometryNodeStructure::GetShadowFlag(void) const
+{
+	if (shadowFlag[0]) {
+		return shadowFlag[1];
+	}
+	else {
+		return geometryObjectStructure->GetShadowFlag();
+	}
+}
+
+bool GeometryNodeStructure::GetMotionBlurFlag(void) const
+{
+	if (motionBlurFlag[0]) {
+		return motionBlurFlag[1];
+	}
+	else {
+		return geometryObjectStructure->GetMotionBlurFlag();
+	}
+}
 
 // Light Node Structure
 LightNodeStructure::LightNodeStructure() : NodeStructure(kStructureLightNode)
