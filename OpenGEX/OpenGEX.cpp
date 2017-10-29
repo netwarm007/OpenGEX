@@ -998,6 +998,11 @@ const ObjectStructure *GeometryNodeStructure::GetObjectStructure(void) const
 	return (geometryObjectStructure);
 }
 
+const auto GeometryNodeStructure::GetMaterialStructureArray(void) const -> decltype(materialStructureArray)
+{
+    return (materialStructureArray);
+}
+
 bool GeometryNodeStructure::GetVisibleFlag(void) const
 {
 	if (visibleFlag[0]) {
