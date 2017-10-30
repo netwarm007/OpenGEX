@@ -2753,6 +2753,7 @@ DataResult MaterialStructure::ProcessData(DataDescription *dataDescription)
 	}
 
 	// Do application-specific material processing here.
+	materialName = static_cast<const NameStructure *>(structure)->GetName();
 
 	return (kDataOkay);
 }
