@@ -998,7 +998,7 @@ const ObjectStructure *GeometryNodeStructure::GetObjectStructure(void) const
 	return (geometryObjectStructure);
 }
 
-const auto GeometryNodeStructure::GetMaterialStructureArray(void) const -> decltype(materialStructureArray)
+auto GeometryNodeStructure::GetMaterialStructureArray(void) const -> decltype(materialStructureArray)
 {
     return (materialStructureArray);
 }
