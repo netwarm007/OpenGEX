@@ -998,6 +998,11 @@ const ObjectStructure *GeometryNodeStructure::GetObjectStructure(void) const
 	return (geometryObjectStructure);
 }
 
+auto GeometryNodeStructure::GetMaterialStructureArray(void) const -> decltype(materialStructureArray)
+{
+    return (materialStructureArray);
+}
+
 bool GeometryNodeStructure::GetVisibleFlag(void) const
 {
 	if (visibleFlag[0]) {
@@ -2748,6 +2753,7 @@ DataResult MaterialStructure::ProcessData(DataDescription *dataDescription)
 	}
 
 	// Do application-specific material processing here.
+	materialName = static_cast<const NameStructure *>(structure)->GetName();
 
 	return (kDataOkay);
 }
