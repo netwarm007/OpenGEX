@@ -21,3 +21,10 @@ install(TARGETS OpenDDL
     PUBLIC_HEADER DESTINATION include
 )
 
+if(MSVC)
+    install(FILES ${PROJECT_BINARY_DIR}/OpenDDL/Debug/OpenDDL.pdb
+        DESTINATION lib
+        CONFIGURATIONS Debug
+        )
+endif(MSVC)
+

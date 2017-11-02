@@ -15,3 +15,11 @@ install(TARGETS OpenGEX
     PUBLIC_HEADER DESTINATION include
 )
 
+if(MSVC)
+    install(FILES ${PROJECT_BINARY_DIR}/OpenGEX/Debug/OpenGEX.pdb
+        DESTINATION lib
+        CONFIGURATIONS Debug
+        )
+endif(MSVC)
+
+
