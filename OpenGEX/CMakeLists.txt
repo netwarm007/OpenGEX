@@ -15,11 +15,11 @@ install(TARGETS OpenGEX
     PUBLIC_HEADER DESTINATION ${CMAKE_SYSTEM_NAME}/include
 )
 
-if(MSVC)
+if(${MSVC})
     install(FILES ${PROJECT_BINARY_DIR}/OpenGEX/Debug/OpenGEX.pdb
-        DESTINATION lib
+        DESTINATION ${CMAKE_SYSTEM_NAME}/lib
         CONFIGURATIONS Debug
         )
-endif(MSVC)
+endif(${MSVC})
 
 
