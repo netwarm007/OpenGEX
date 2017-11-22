@@ -66,6 +66,8 @@
 #include <cstdlib>
 
 
+using namespace std;
+
 namespace ODDL
 {
 	#define restrict __restrict
