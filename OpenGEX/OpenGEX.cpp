@@ -1047,6 +1047,16 @@ LightNodeStructure::~LightNodeStructure()
 {
 }
 
+bool LightNodeStructure::GetShadowFlag(void) const
+{
+	if (shadowFlag[0]) {
+		return shadowFlag[1];
+	}
+	else {
+		return lightObjectStructure->GetShadowFlag();
+	}
+}
+
 bool LightNodeStructure::ValidateProperty(const DataDescription *dataDescription, const String& identifier, DataType *type, void **value)
 {
 	if (identifier == "shadow")
