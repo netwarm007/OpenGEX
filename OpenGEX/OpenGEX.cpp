@@ -88,6 +88,17 @@ Structure *OpenGexStructure::GetLastCoreSubnode(void) const
 	return (structure);
 }
 
+Structure *OpenGexStructure::GetFirstExtensionSubnode(void) const
+{
+	Structure *structure = GetFirstSubnode();
+	while ((structure) && (structure->GetStructureType() != kStructureExtension))
+	{
+		structure = structure->Next();
+	}
+
+	return (structure);
+}
+
 bool OpenGexStructure::ValidateSubstructure(const DataDescription *dataDescription, const Structure *structure) const
 {
 	return (structure->GetStructureType() == kStructureExtension);
