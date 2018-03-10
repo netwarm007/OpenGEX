@@ -625,10 +625,7 @@ DataResult RotationStructure::ProcessData(DataDescription *dataDescription)
 		return (kDataOpenGexInvalidRotationKind);
 	}
 
-	const float *data = &dataStructure->GetDataElement(0);
-
-	// Data is 1 or 4 floats depending on kind.
-	// Build application-specific transform here.
+	rotationArray = &dataStructure->GetDataElement(0);
 
 	return (kDataOkay);
 }

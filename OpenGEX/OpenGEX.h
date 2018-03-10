@@ -359,6 +359,7 @@ namespace OGEX
         private:
 
             String      rotationKind;
+            const float* rotationArray;     
 
         public:
 
@@ -368,6 +369,11 @@ namespace OGEX
             const String& GetRotationKind(void) const
             {
                 return (rotationKind);
+            }
+
+            const float* GetRotation(void) const
+            {
+                return (rotationArray);
             }
 
             bool ValidateProperty(const DataDescription *dataDescription, const String& identifier, DataType *type, void **value);
