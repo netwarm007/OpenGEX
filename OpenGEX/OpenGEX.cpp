@@ -703,8 +703,7 @@ DataResult ScaleStructure::ProcessData(DataDescription *dataDescription)
 
 	const float *data = &dataStructure->GetDataElement(0);
 
-	// Data is 1 or 3 floats depending on kind.
-	// Build application-specific transform here.
+	scaleArray = &dataStructure->GetDataElement(0);
 
 	return (kDataOkay);
 }

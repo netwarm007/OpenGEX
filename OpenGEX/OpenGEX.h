@@ -387,6 +387,7 @@ namespace OGEX
         private:
 
             String      scaleKind;
+            const float* scaleArray;     
 
         public:
 
@@ -396,6 +397,11 @@ namespace OGEX
             const String& GetScaleKind(void) const
             {
                 return (scaleKind);
+            }
+
+            const float* GetScale(void) const
+            {
+                return (scaleArray);
             }
 
             bool ValidateProperty(const DataDescription *dataDescription, const String& identifier, DataType *type, void **value);
